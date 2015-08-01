@@ -9,7 +9,16 @@
 
 `Default` instances for [unordered-containers][].
 
+This package is intended to be used in conjunction with [data-default][]
+package or directly with [data-default-class][] package.
 
+
+[data-default]:
+  https://hackage.haskell.org/package/data-default
+  "Hackage: data-default"
+[data-default-class]:
+  https://hackage.haskell.org/package/data-default-class
+  "Hackage: data-default-class"
 [Haskell.org]:
   http://www.haskell.org
   "The Haskell Programming Language"
