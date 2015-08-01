@@ -14,7 +14,7 @@
 module Data.Default.Instances.UnorderedContainers ()
   where
 
-import qualified Data.HashMap.Strict (HashMap)
+import Data.HashMap.Strict (HashMap)
 import qualified Data.HashMap.Strict as HashMap (empty)
 import Data.HashSet (HashSet)
 import qualified Data.HashSet as HashSet (empty)
