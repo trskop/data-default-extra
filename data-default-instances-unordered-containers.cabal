@@ -1,0 +1,33 @@
+name:                   data-default-instances-unordered-containers
+version:                0.0.1
+synopsis:               Default instances for unordered-containers
+-- description:
+homepage:               https://github.com/trskop/data-default-instances-unordered-containers
+license:                BSD3
+license-file:           LICENSE
+author:                 Peter Trško
+maintainer:             peter.trsko@gmail.com
+copyright:              (c) 2015, Peter Trško
+category:               Data
+build-type:             Simple
+cabal-version:          >=1.10
+
+extra-source-files:     ChangeLog.md, README.md
+
+library
+  hs-source-dirs:       src
+  exposed-modules:      Data.Default.Instances.UnorderedContainers
+
+  default-language:     Haskell2010
+  other-extensions:     NoImplicitPrelude
+
+  build-depends:
+      base ==4.*
+      -- ^ Same bounds as unordered-containers version 0.2.5.1, which is the
+      -- latest version at the time of writing.
+    , unordered-containers >=0.1.3 && <0.3
+    -- ^ Version 0.1.3 is the first one that introduced HashSet.
+
+    , data-default-class ==0.0.*
+
+  ghc-options:          -Wall -fwarn-tabs
