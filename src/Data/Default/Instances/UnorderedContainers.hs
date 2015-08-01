@@ -1,4 +1,5 @@
 {-# LANGUAGE NoImplicitPrelude #-}
+{-# OPTIONS_GHC -fno-warn-orphans #-}
 -- |
 -- Module:       $HEADER$
 -- Description:  Default instances for HashMap and HashSet.
