@@ -20,7 +20,6 @@ cabal-version:          >=1.10
 
 extra-source-files:
     ChangeLog.md
-  , LICENSE.fast-logger
   , README.md
 
 library
