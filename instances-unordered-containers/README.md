@@ -3,7 +3,8 @@
 [![Haskell Programming Language](https://img.shields.io/badge/language-Haskell-blue.svg)][Haskell.org]
 [![BSD3 License](http://img.shields.io/badge/license-BSD3-brightgreen.svg)][tl;dr Legal: BSD3]
 
-[![Build](https://travis-ci.org/trskop/data-default-instances-unordered-containers.svg)](https://travis-ci.org/trskop/data-default-instances-unordered-containers)
+[![Build](https://travis-ci.org/trskop/data-default-extra.svg)](https://travis-ci.org/trskop/data-default-extra)
+
 
 # Description
 

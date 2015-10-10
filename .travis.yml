@@ -5,6 +5,12 @@ ghc:
   - 7.6
   - 7.4
 
+env:
+  - SUBDIR=instances-unordered-containers
+
+before_install:
+  - cd "$SUBDIR"
+
 script:
   - cabal configure && cabal build
 
