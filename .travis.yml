@@ -6,6 +6,7 @@ ghc:
   - 7.4
 
 env:
+  - SUBDIR=instances-new-base
   - SUBDIR=instances-unordered-containers
 
 before_install:

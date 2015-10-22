@@ -1,0 +1,32 @@
+name:                   data-default-instances-new-base
+version:                0.1.0.0
+synopsis:
+  Default instances for types in newer versions of base package.
+--description:            TODO
+homepage:               https://github.com/trskop/data-default-extra
+license:                BSD3
+license-file:           LICENSE
+author:                 Peter Trško
+maintainer:             peter.trsko@gmail.com
+copyright:              (c) 2015, Peter Trško
+category:               Data
+build-type:             Simple
+cabal-version:          >=1.10
+
+extra-source-files:     ChangeLog.md, README.md
+
+library
+  hs-source-dirs:       src
+  exposed-modules:      Data.Default.Instances.Base.New
+  -- other-modules:
+
+  default-language:     Haskell2010
+  other-extensions:     CPP, NoImplicitPrelude, DataKinds
+
+  build-depends:
+      base >=4 && <5
+    -- ^ Probably even lower version of base could be supported.
+    , data-default-class ==0.0.*
+    , data-default-instances-base ==0.0.*
+
+  ghc-options:          -Wall -fwarn-tabs
