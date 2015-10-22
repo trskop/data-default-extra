@@ -18,44 +18,11 @@
 -- Portability:  CPP, DataKinds (for base >=4.7.0.0), FlexibleInstances,
 --               NoImplicitPrelude
 --
--- Following 'Default' instances are provided:
---
--- @
--- instance 'Default' a => 'Default' ('Const' a b) where
---     'def' = 'Const' 'def'
---
--- instance 'Monad' m => 'Default' ('Kleisli' m a b) where
---     'def' = 'Kleisli' 'return'
---
--- instance 'Default' 'Version' where
---     'def' = 'Version' [] []
--- @
---
--- Following instances are available only for base >= 4.7.0.0:
---
--- @
--- instance 'Default' ('Proxy' a) where
---     'def' = 'Proxy'
---
--- instance 'Default' 'SomeNat' where
---     'def' = 'SomeNat' ('Proxy' :: 'Proxy' 0)
---
--- instance 'Default' 'SomeNat' where
---     'def' = 'SomeSymbol' ('Proxy' :: 'Proxy' \"\")
--- @
---
--- Following instances are available only for base >= 4.8.0.0:
---
--- @
--- instance 'Default' a => 'Default' ('Identity' a) where
---     'def' = 'Identity' 'def'
---
--- instance 'Default' 'Natural' where
---     'def' = 0
--- @
---
--- This module also reexporting instances from "Data.Default.Instances.Base".
+-- 'Default' instances for types in newer versions of
+-- <https://hackage.haskell.org/package/base base> package.
 module Data.Default.Instances.Base.New
+    ( -- $providedInstances
+    )
   where
 
 import Control.Applicative (Const(Const))
@@ -111,3 +78,43 @@ instance Default a => Default (Identity a) where
 instance Default Natural where
     def = 0
 #endif
+
+-- $providedInstances
+--
+-- Following 'Default' instances are provided:
+--
+-- @
+-- instance 'Default' a => 'Default' ('Const' a b) where
+--     'def' = 'Const' 'def'
+--
+-- instance 'Monad' m => 'Default' ('Kleisli' m a b) where
+--     'def' = 'Kleisli' 'return'
+--
+-- instance 'Default' 'Version' where
+--     'def' = 'Version' [] []
+-- @
+--
+-- Following instances are available only for base >= 4.7.0.0:
+--
+-- @
+-- instance 'Default' ('Proxy' a) where
+--     'def' = 'Proxy'
+--
+-- instance 'Default' 'SomeNat' where
+--     'def' = 'SomeNat' ('Proxy' :: 'Proxy' 0)
+--
+-- instance 'Default' 'SomeNat' where
+--     'def' = 'SomeSymbol' ('Proxy' :: 'Proxy' \"\")
+-- @
+--
+-- Following instances are available only for base >= 4.8.0.0:
+--
+-- @
+-- instance 'Default' a => 'Default' ('Identity' a) where
+--     'def' = 'Identity' 'def'
+--
+-- instance 'Default' 'Natural' where
+--     'def' = 0
+-- @
+--
+-- This module also reexporting instances from "Data.Default.Instances.Base".

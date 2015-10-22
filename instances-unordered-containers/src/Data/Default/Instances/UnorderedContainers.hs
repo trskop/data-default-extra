@@ -10,8 +10,12 @@
 -- Stability:    experimental
 -- Portability:  NoImplicitPrelude
 --
--- 'Default' instances for 'HashMap' and 'HashSet'.
-module Data.Default.Instances.UnorderedContainers ()
+-- 'Default' instances for 'HashMap' and 'HashSet' from
+-- <https://hackage.haskell.org/package/unordered-containers unordered-containers>
+-- package.
+module Data.Default.Instances.UnorderedContainers
+    ( -- $providedInstances
+    )
   where
 
 import Data.HashMap.Strict (HashMap)
@@ -27,3 +31,15 @@ instance Default (HashMap k v) where
 
 instance Default (HashSet a) where
     def = HashSet.empty
+
+-- $providedInstances
+--
+-- Following instances are provided:
+--
+-- @
+-- instance 'Default' ('HashMap' k v) where
+--     'def' = 'HashMap.empty'
+--
+-- instance 'Default' ('HashSet' a) where
+--     'def' = 'HashSet.empty'
+-- @
