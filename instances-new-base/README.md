@@ -1,4 +1,4 @@
-# data-default-extra
+# data-default-instances-new-base
 
 [![Haskell Programming Language](https://img.shields.io/badge/language-Haskell-blue.svg)][Haskell.org]
 [![BSD3 License](http://img.shields.io/badge/license-BSD3-brightgreen.svg)][tl;dr Legal: BSD3]
@@ -11,9 +11,6 @@
 Default instances for types in newer versions of base package.
 
 
-[data-default]:
-  https://hackage.haskell.org/package/data-default
-  "Hackage: data-default"
 [Haskell.org]:
   http://www.haskell.org
   "The Haskell Programming Language"
