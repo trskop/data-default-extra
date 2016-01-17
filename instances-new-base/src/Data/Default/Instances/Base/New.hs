@@ -34,7 +34,9 @@ import GHC.TypeLits (SomeNat(SomeNat), SomeSymbol(SomeSymbol))
 #endif
 
 #if MIN_VERSION_base(4,8,0)
+import Control.Applicative (Alternative)
 import Data.Functor.Identity (Identity(Identity))
+import Data.Monoid (Alt, Monoid(mempty))
 import Data.Version (Version, makeVersion)
 import Numeric.Natural (Natural)
 #else
@@ -78,6 +80,9 @@ instance Default SomeSymbol where
 #endif
 
 #if MIN_VERSION_base(4,8,0)
+instance Alternative f => Default (Alt f a) where
+    def = mempty
+
 instance Default a => Default (Identity a) where
     def = Identity def
 
@@ -116,6 +121,9 @@ instance Default Natural where
 -- Following instances are available only for base >= 4.8.0.0:
 --
 -- @
+-- instance 'Alternative' f => 'Default' ('Alt' f a) where
+--     'def' = 'Data.Monoid.Alt' 'Control.Applicative.empty'
+--
 -- instance 'Default' a => 'Default' ('Identity' a) where
 --     'def' = 'Identity' 'def'
 --
