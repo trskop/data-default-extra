@@ -25,7 +25,6 @@ module Data.Default.Instances.Base.New
     )
   where
 
-import Control.Applicative (Const(Const))
 import Control.Arrow (Kleisli(Kleisli))
 import Control.Monad (Monad(return))
 
@@ -40,6 +39,13 @@ import Data.Version (Version, makeVersion)
 import Numeric.Natural (Natural)
 #else
 import Data.Version (Version(Version))
+#endif
+
+#if MIN_VERSION_base(4,9,0)
+import Data.Functor.Const
+    -- Const was moved in to its own module.
+#else
+import Control.Applicative (Const(Const))
 #endif
 
 import Data.Default.Class (Default(def))
