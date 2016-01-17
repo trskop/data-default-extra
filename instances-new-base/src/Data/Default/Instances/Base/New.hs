@@ -44,8 +44,16 @@ import Data.Version (Version(Version))
 #endif
 
 #if MIN_VERSION_base(4,9,0)
+import Prelude (Bounded(maxBound, minBound))
+
 import Data.Functor.Const
-    -- Const was moved in to its own module.
+    -- Const was moved from "Control.Applicative" in to its own module.
+import Data.List.NonEmpty (NonEmpty((:|)))
+import Data.Semigroup
+    ( Min
+    , Max
+    , Option
+    )
 #else
 import Control.Applicative (Const(Const))
 #endif
@@ -90,6 +98,20 @@ instance Default Natural where
     def = 0
 #endif
 
+#if MIN_VERSION_base(4,9,0)
+instance Default a => Default (NonEmpty a) where
+    def = def :| []
+
+instance Bounded a => Default (Min a) where
+    def = minBound
+
+instance Bounded a => Default (Max a) where
+    def = maxBound
+
+instance Default (Option a) where
+    def = mempty
+#endif
+
 -- $providedInstances
 --
 -- Following 'Default' instances are provided:
@@ -129,6 +151,22 @@ instance Default Natural where
 --
 -- instance 'Default' 'Natural' where
 --     'def' = 0
+-- @
+--
+-- Following instances are available only for base >= 4.9.0.0:
+--
+-- @
+-- instance 'Default' a => 'Default' ('NonEmpty' a) where
+--     'def' = 'def' ':|' []
+--
+-- instance 'Bounded' a => 'Default' ('Min' a) where
+--     'def' = 'minBound'
+--
+-- instance 'Bounded' a => 'Default' ('Max' a) where
+--     'def' = maxBound
+--
+-- instance 'Default' ('Option' a) where
+--     'def' = 'Data.Semigroup.Option' 'Data.Maybe.Nothing'
 -- @
 --
 -- This module also reexporting instances from "Data.Default.Instances.Base".
