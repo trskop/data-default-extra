@@ -8,7 +8,7 @@ description:
   <https://hackage.haskell.org/package/data-default-class data-default-class>
   package.
 
-homepage:               https://github.com/trskop/data-default-instances-unordered-containers
+homepage:               https://github.com/trskop/data-default-extra
 license:                BSD3
 license-file:           LICENSE
 author:                 Peter Trško
