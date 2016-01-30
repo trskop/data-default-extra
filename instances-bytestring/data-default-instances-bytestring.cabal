@@ -1,0 +1,42 @@
+name:                   data-default-instances-bytestring
+version:                0.0.1
+synopsis:
+  Default instances for (lazy and strict) ByteString and ByteString Builder.
+description:
+  This package is intended to be used in conjunction with
+  <https://hackage.haskell.org/package/data-default data-default> package or
+  directly with
+  <https://hackage.haskell.org/package/data-default-class data-default-class>
+  package.
+
+homepage:               https://github.com/trskop/data-default-extra
+license:                BSD3
+license-file:           LICENSE
+author:                 Peter Trško
+maintainer:             peter.trsko@gmail.com
+copyright:              (c) 2016, Peter Trško
+category:               Data
+build-type:             Simple
+cabal-version:          >=1.10
+
+extra-source-files:
+    ChangeLog.md
+  , README.md
+
+library
+  hs-source-dirs:       src
+  exposed-modules:      Data.Default.Instances.ByteString
+
+  default-language:     Haskell2010
+  other-extensions:     CPP, NoImplicitPrelude
+
+  build-depends:
+      base <6
+    -- ^ Only using mempty method of Monoid class, therefore the bounds do not
+    -- really matter, unless Monoid class is drastically changed.
+    , bytestring >=0.9 && <1
+    -- ^ Version 0.9 is the oldest available on Hackage.
+
+    , data-default-class ==0.0.*
+
+  ghc-options:          -Wall -fwarn-tabs
