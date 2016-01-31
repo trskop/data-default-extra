@@ -20,7 +20,11 @@ module Data.Default.Instances.ByteString
     )
   where
 
+#if MIN_VERSION_bytestring(0,10,0)
+-- Importing mempty only for Builder instance. Builder is not available before
+-- bytestring ==0.10.
 import Data.Monoid (Monoid(mempty))
+#endif
 
 import qualified Data.ByteString as Strict (ByteString)
 import qualified Data.ByteString as Strict.ByteString (empty)
