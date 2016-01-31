@@ -42,7 +42,7 @@ install:
         extra;
     do
         echo; echo;
-        printf "$pkg";
+        echo "$pkg:";
         cd "$pkg";
         cabal install --only-dependencies
             -fwith-bytestring
@@ -68,7 +68,7 @@ script:
         extra;
     do
         echo; echo;
-        printf "$pkg";
+        echo "$pkg:";
         cd "$pkg";
         cabal install
             -fwith-bytestring
@@ -94,7 +94,7 @@ script:
         extra;
     do
         echo; echo;
-        printf "$pkg";
+        echo "$pkg:";
         cd "$pkg";
         cabal configure;
         cabal sdist | sed -rn '$s/^[^:]+:\s+//p' | xargs cabal install
