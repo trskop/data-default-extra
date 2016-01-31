@@ -8,7 +8,12 @@
 
 # Description
 
-`Default` instance for `CI` type from [case-insensitive][] package.
+`Default` instance for `CI` type from [case-insensitive][] package:
+
+```Haskell
+instance (Default s, FoldCase s) => Default (CI s) where
+    def = CI.mk def
+```
 
 
 [case-insensitive]:

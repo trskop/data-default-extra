@@ -8,7 +8,23 @@
 
 # Description
 
-`Default` instances for [bytestring][].
+`Default` instances for types defined in [bytestring][] package:
+
+```Haskell
+instance Default Strict.ByteString where
+    def = Strict.ByteString.empty
+
+instance Default Lazy.ByteString where
+    def = Lazy.ByteString.empty
+
+-- For bytestring >=0.10.
+instance Default Builder where
+    def = mempty
+
+-- For bytestring >=0.10.4.
+instance Default ShortByteString where
+    def = ShortByteString.empty
+```
 
 This package is intended to be used in conjunction with [data-default][]
 package or directly with [data-default-class][] package.

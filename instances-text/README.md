@@ -8,7 +8,19 @@
 
 # Description
 
-`Default` instances for [text][].
+`Default` instances for types defined in [text][] package:
+
+```Haskell
+instance Default Strict.Text where
+    def = Strict.Text.empty
+
+instance Default Lazy.Text where
+    def = Lazy.Text.empty
+
+-- For text >=0.8
+instance Default Builder where
+    def = mempty
+```
 
 This package is intended to be used in conjunction with [data-default][]
 package or directly with [data-default-class][] package.
