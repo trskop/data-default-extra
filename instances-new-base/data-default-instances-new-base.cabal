@@ -1,5 +1,5 @@
 name:                   data-default-instances-new-base
-version:                0.1.0.0
+version:                0.0.1
 synopsis:
   Default instances for types in newer versions of base package.
 --description:            TODO
