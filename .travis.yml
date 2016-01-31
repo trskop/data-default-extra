@@ -76,5 +76,25 @@ script:
         cd "..";
     done
 
-  # Following line tests if sdist package is created correctly.
-  - cabal sdist | sed -rn '$s/^[^:]+:\s+//p' | xargs cabal install
+  # Following tests if sdist packages are created correctly.
+  - for pkg in
+        instances-bytestring
+        instances-case-insensitive
+        instances-new-base
+        instances-text
+        instances-unordered-containers
+        instances-vector
+        extra;
+    do
+        cd "$pkg";
+        cabal sdist | sed -rn '$s/^[^:]+:\s+//p' | xargs cabal install
+            -fwith-bytestring
+            -fwith-case-insensitive
+            -fwith-containers
+            -fwith-dlist
+            -fwith-text
+            -fwith-old-locale
+            -fwith-unordered-containers
+            -fwith-vector;
+        cd "..";
+    done
