@@ -35,6 +35,11 @@ import Data.ByteString.Builder (Builder)
 import Data.ByteString.Lazy.Builder (Builder)
 #endif
 
+#if MIN_VERSION_bytestring(0,10,4)
+import Data.ByteString.Short (ShortByteString)
+import qualified Data.ByteString.Short as ShortByteString (empty)
+#endif
+
 import Data.Default.Class (Default(def))
 
 
@@ -60,6 +65,15 @@ instance Default Builder where
     {-# INLINE def #-}
 #endif
 
+#if MIN_VERSION_bytestring(0,10,4)
+-- Version 0.10.4.0 is the first that introduced ShortByteString.
+
+-- | @'def' = 'ShortByteString.empty'@
+instance Default ShortByteString where
+    def = ShortByteString.empty
+    {-# INLINE def #-}
+#endif
+
 
 -- $providedInstances
 --
@@ -75,11 +89,20 @@ instance Default Builder where
 --     'def' = 'Lazy.ByteString.empty'
 -- @
 --
--- Following instances are provided only for
+-- Following instance is provided only for
 -- <https://hackage.haskell.org/package/bytestring bytestring> >=0.10, since
 -- that it the version that introduced 'Builder':
 --
 -- @
 -- instance 'Default' 'Builder' where
 --     'def' = 'mempty'
+-- @
+--
+-- Following instance is provided only for
+-- <https://hackage.haskell.org/package/bytestring bytestring> >=0.10.4, since
+-- that it the version that introduced 'ShortByteString':
+--
+-- @
+-- instance 'Default' 'ShortByteString' where
+--     'def' = 'ShortByteString.empty'
 -- @
