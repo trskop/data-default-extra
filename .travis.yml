@@ -26,26 +26,55 @@ matrix:
 
 before_install:
   - export PATH=/opt/ghc/$GHCVER/bin:/opt/cabal/$CABALVER/bin:$PATH
-  - cd "extra"
-  - cabal sandbox init
-  - cabal sandbox add-source
-        ../instances-bytestring
-        ../instances-case-insensitive
-        ../instances-new-base
-        ../instances-text
-        ../instances-unordered-containers
-        ../instances-vector
 
 install:
   - cabal --version
   - echo "$(ghc --version) [$(ghc --print-project-git-commit-id 2> /dev/null || echo '?')]"
   - travis_retry cabal update
-  - cabal install --only-dependencies
+  - for pkg in
+        instances-bytestring
+        instances-case-insensitive
+        instances-new-base
+        instances-text
+        instances-unordered-containers
+        instances-vector
+        extra;
+    do
+        cd "$pkg";
+        cabal install --only-dependencies
+            -fwith-bytestring
+            -fwith-case-insensitive
+            -fwith-containers
+            -fwith-dlist
+            -fwith-text
+            -fwith-old-locale
+            -fwith-unordered-containers
+            -fwith-vector;
+        cd "..";
+    done
 
 script:
-  - cabal configure
-  - cabal build
-  - cabal haddock
+  - for pkg in
+        instances-bytestring
+        instances-case-insensitive
+        instances-new-base
+        instances-text
+        instances-unordered-containers
+        instances-vector
+        extra;
+    do
+        cd "$pkg";
+        cabal install
+            -fwith-bytestring
+            -fwith-case-insensitive
+            -fwith-containers
+            -fwith-dlist
+            -fwith-text
+            -fwith-old-locale
+            -fwith-unordered-containers
+            -fwith-vector;
+        cd "..";
+    done
 
   # Following line tests if sdist package is created correctly.
   - cabal sdist | sed -rn '$s/^[^:]+:\s+//p' | xargs cabal install
