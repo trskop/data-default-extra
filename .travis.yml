@@ -41,6 +41,7 @@ install:
         instances-vector
         extra;
     do
+        printf "\n\n*** $pkg: Installing dependencies... ";
         cd "$pkg";
         cabal install --only-dependencies
             -fwith-bytestring
@@ -52,6 +53,7 @@ install:
             -fwith-unordered-containers
             -fwith-vector;
         cd "..";
+        echo "done.";
     done
 
 script:
@@ -65,6 +67,7 @@ script:
         instances-vector
         extra;
     do
+        printf "\n\n*** $pkg: Installing package... ";
         cd "$pkg";
         cabal install
             -fwith-bytestring
@@ -76,6 +79,7 @@ script:
             -fwith-unordered-containers
             -fwith-vector;
         cd "..";
+        echo "done.";
     done
 
   # Following tests if sdist packages are created correctly.
@@ -89,6 +93,7 @@ script:
         instances-vector
         extra;
     do
+        printf "\n\n*** $pkg: Installing sdist package... ";
         cd "$pkg";
         cabal configure;
         cabal sdist | sed -rn '$s/^[^:]+:\s+//p' | xargs cabal install
@@ -101,4 +106,5 @@ script:
             -fwith-unordered-containers
             -fwith-vector;
         cd "..";
+        echo "done.";
     done
