@@ -49,7 +49,7 @@ import Prelude (Bounded(maxBound, minBound))
 import Data.Functor.Const
     -- Const was moved from "Control.Applicative" in to its own module.
 import Data.List.NonEmpty (NonEmpty((:|)))
-import Data.Maybe Maybe(Nothing)
+import Data.Maybe (Maybe(Nothing))
 import Data.Semigroup
     ( Min
     , Max
