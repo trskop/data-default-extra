@@ -42,7 +42,7 @@ install:
         extra;
     do
         echo; echo;
-        printf "$pkg: Installing dependencies... ";
+        printf "$pkg";
         cd "$pkg";
         cabal install --only-dependencies
             -fwith-bytestring
@@ -54,7 +54,6 @@ install:
             -fwith-unordered-containers
             -fwith-vector;
         cd "..";
-        echo "done.";
     done
 
 script:
@@ -69,7 +68,7 @@ script:
         extra;
     do
         echo; echo;
-        printf "$pkg: Installing package... ";
+        printf "$pkg";
         cd "$pkg";
         cabal install
             -fwith-bytestring
@@ -81,7 +80,6 @@ script:
             -fwith-unordered-containers
             -fwith-vector;
         cd "..";
-        echo "done.";
     done
 
   # Following tests if sdist packages are created correctly.
@@ -96,7 +94,7 @@ script:
         extra;
     do
         echo; echo;
-        printf "$pkg: Installing sdist package... ";
+        printf "$pkg";
         cd "$pkg";
         cabal configure;
         cabal sdist | sed -rn '$s/^[^:]+:\s+//p' | xargs cabal install
@@ -109,5 +107,4 @@ script:
             -fwith-unordered-containers
             -fwith-vector;
         cd "..";
-        echo "done.";
     done
