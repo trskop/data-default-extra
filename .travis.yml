@@ -79,6 +79,7 @@ script:
             -fwith-old-locale
             -fwith-unordered-containers
             -fwith-vector;
+        ghc-pkg list;
         cd "..";
     done
 
