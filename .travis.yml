@@ -38,7 +38,7 @@ install:
         instances-new-base
         instances-text
         instances-unordered-containers
-        instances-vector
+        instances-vector;
     do
         echo; echo;
         echo "$pkg:";
