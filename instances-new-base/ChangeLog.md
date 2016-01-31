@@ -1,4 +1,6 @@
 # ChangeLog / ReleaseNotes
 
 
-## Version 0.1.0.0
+## Version 0.0.1
+
+* First public release.
