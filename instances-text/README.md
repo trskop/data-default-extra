@@ -26,6 +26,17 @@ This package is intended to be used in conjunction with [data-default][]
 package or directly with [data-default-class][] package.
 
 
+## License
+
+The BSD 3-Clause License, see [LICENSE][] file for details.
+
+
+## Contributions
+
+Contributions, pull requests and bug reports are welcome! Please don't be
+afraid to contact author using GitHub or by e-mail.
+
+
 [data-default]:
   https://hackage.haskell.org/package/data-default
   "Package data-default on Hackage"
@@ -35,6 +46,9 @@ package or directly with [data-default-class][] package.
 [Haskell.org]:
   http://www.haskell.org
   "The Haskell Programming Language"
+[LICENSE]:
+  https://github.com/trskop/data-default-extra/blob/master/instances-text/LICENSE
+  "License of data-default-instances-text package."
 [text]:
   https://hackage.haskell.org/package/text
   "Package text on Hackage"
