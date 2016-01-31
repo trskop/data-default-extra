@@ -6,8 +6,10 @@ ghc:
   - 7.4
 
 env:
+  - SUBDIR=instances-bytestring
   - SUBDIR=instances-case-insensitive
   - SUBDIR=instances-new-base
+  - SUBDIR=instances-text
   - SUBDIR=instances-unordered-containers
   - SUBDIR=instances-vector
 
