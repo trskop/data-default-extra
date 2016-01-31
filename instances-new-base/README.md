@@ -8,9 +8,74 @@
 
 # Description
 
-Default instances for types in newer versions of base package.
+`Default` instances for types in newer versions of [base][] package:
+
+```Haskell
+instance Default a => Default (Const a b) where
+    def = Const def
+
+instance Monad m => Default (Kleisli m a b) where
+    def = Kleisli return
+
+instance Default Version where
+    def = Version [] []
+```
+
+Following instances are available only for [base][] >= 4.7.0.0:
+
+```Haskell
+instance Default (Proxy a) where
+    def = Proxy
+
+instance Default SomeNat where
+    def = SomeNat (Proxy :: Proxy 0)
+
+instance Default SomeNat where
+    def = SomeSymbol (Proxy :: Proxy "")
+```
+
+Following instances are available only for [base][] >= 4.8.0.0:
+
+```Haskell
+instance Alternative f => Default (Alt f a) where
+    def = Data.Monoid.Alt Control.Applicative.empty
+
+instance Default a => Default (Identity a) where
+    def = Identity def
+
+instance Default Natural where
+    def = 0
+```
+
+Following instances are available only for [base][] >= 4.9.0.0:
+
+```Haskell
+instance Default a => Default (NonEmpty a) where
+    def = def :| []
+
+instance 'Bounded' a => Default (Min a) where
+    def = minBound
+
+instance Bounded a => Default (Max a) where
+    def = maxBound
+
+instance 'Default' ('Option' a) where
+    def = Option Nothing
+```
+
+This package is intended to be used in conjunction with [data-default][]
+package or directly with [data-default-class][] package.
 
 
+[base]:
+  https://hackage.haskell.org/package/base
+  "Package base on Hackage"
+[data-default]:
+  https://hackage.haskell.org/package/data-default
+  "Package data-default on Hackage"
+[data-default-class]:
+  https://hackage.haskell.org/package/data-default-class
+  "Package data-default-class on Hackage"
 [Haskell.org]:
   http://www.haskell.org
   "The Haskell Programming Language"

@@ -8,7 +8,15 @@
 
 # Description
 
-`Default` instances for [unordered-containers][].
+`Default` instances for types defined in [unordered-containers][] package:
+
+```Haskell
+instance Default (HashMap k v) where
+    def = HashMap.empty
+
+instance Default (HashSet a) where
+    def = HashSet.empty
+```
 
 This package is intended to be used in conjunction with [data-default][]
 package or directly with [data-default-class][] package.
