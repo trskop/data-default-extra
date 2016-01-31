@@ -16,8 +16,8 @@ extra-source-files:     ChangeLog.md, README.md
 
 flag with-bytestring
   description:
-    Provide instances for (lazy and strict) ByteString and for ByteString
-    Builder.
+    Provide instances for (lazy and strict) ByteString, ByteString Builder and
+    for ShortByteString.
 
   default:              True
   manual:               False

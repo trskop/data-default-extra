@@ -1,7 +1,8 @@
 name:                   data-default-instances-bytestring
 version:                0.0.1
 synopsis:
-  Default instances for (lazy and strict) ByteString and ByteString Builder.
+  Default instances for (lazy and strict) ByteString, ByteString Builder and
+  ShortByteString.
 description:
   This package is intended to be used in conjunction with
   <https://hackage.haskell.org/package/data-default data-default> package or

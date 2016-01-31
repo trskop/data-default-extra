@@ -9,6 +9,22 @@
 # Description
 
 Set of packages that provide additional instances for [data-default][] package.
+List of provided packages:
+
+* `data-default-extra` - Alternative to [data-default][] package with extra
+  instances.
+* `data-default-instances-bytestring` - Default instances for (lazy and strict)
+  ByteString, ByteString Builder and ShortByteString.
+* `data-default-instances-case-insensitive` - Provides instance for CI (Case
+  Insensitive) type wrapper.
+* `data-default-instances-new-base` - Additional instances for types in newer
+  versions of base package.
+* `data-default-instances-text` - Default instances for (lazy and strict) Text
+  and Text Builder.
+* `data-default-instances-unordered-containers` - Provide instances for HashMap
+  and HashSet.
+* `data-default-instances-vector` - Provide instances for various (boxed and
+  unboxed) Vector types.
 
 
 [data-default]:
