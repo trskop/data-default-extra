@@ -1,23 +1,50 @@
-language: haskell
+# Based on https://github.com/hvr/multi-ghc-travis
 
-ghc:
-  - 7.8
-  - 7.6
-  - 7.4
+language: c
 
-env:
-  - SUBDIR=instances-bytestring
-  - SUBDIR=instances-case-insensitive
-  - SUBDIR=instances-new-base
-  - SUBDIR=instances-text
-  - SUBDIR=instances-unordered-containers
-  - SUBDIR=instances-vector
+# Explicitly request container-based infrastructure.
+sudo: false
+
+matrix:
+  include:
+    - env: CABALVER=1.16 GHCVER=7.4.2
+      addons: {apt: {packages: [cabal-install-1.16, ghc-7.4.2], sources: [hvr-ghc]}}
+    - env: CABALVER=1.16 GHCVER=7.6.3
+      addons: {apt: {packages: [cabal-install-1.16, ghc-7.6.3], sources: [hvr-ghc]}}
+    - env: CABALVER=1.18 GHCVER=7.8.4
+      addons: {apt: {packages: [cabal-install-1.18, ghc-7.8.4], sources: [hvr-ghc]}}
+    - env: CABALVER=1.22 GHCVER=7.10.3
+      addons: {apt: {packages: [cabal-install-1.22, ghc-7.10.3],sources: [hvr-ghc]}}
+    - env: CABALVER=1.24 GHCVER=8.0.1
+      addons: {apt: {packages: [cabal-install-1.24, ghc-8.0.1], sources: [hvr-ghc]}}
+    - env: CABALVER=head GHCVER=head
+      addons: {apt: {packages: [cabal-install-head, ghc-head],  sources: [hvr-ghc]}}
+
+  allow_failures:
+    - env: CABALVER=1.24 GHCVER=8.0.1
+    - env: CABALVER=head GHCVER=head
 
 before_install:
-  - cd "$SUBDIR"
+  - export PATH=/opt/ghc/$GHCVER/bin:/opt/cabal/$CABALVER/bin:$PATH
+  - cd "extra"
+  - cabal add-source
+        ../instances-bytestring
+        ../instances-case-insensitive
+        ../instances-new-base
+        ../instances-text
+        ../instances-unordered-containers
+        ../instances-vector
+
+install:
+  - cabal --version
+  - echo "$(ghc --version) [$(ghc --print-project-git-commit-id 2> /dev/null || echo '?')]"
+  - travis_retry cabal update
+  - cabal install --only-dependencies
 
 script:
-  - cabal configure && cabal build
+  - cabal configure
+  - cabal build
+  - cabal haddock
 
   # Following line tests if sdist package is created correctly.
-  - cabal sdist && cabal install dist/*.tar.gz
+  - cabal sdist | sed -rn '$s/^[^:]+:\s+//p' | xargs cabal install
