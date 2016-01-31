@@ -41,7 +41,7 @@ install:
         instances-vector
         extra;
     do
-        printf "\n\n*** $pkg: Installing dependencies... ";
+        printf "\n\n $pkg: Installing dependencies... ";
         cd "$pkg";
         cabal install --only-dependencies
             -fwith-bytestring
@@ -67,7 +67,7 @@ script:
         instances-vector
         extra;
     do
-        printf "\n\n*** $pkg: Installing package... ";
+        printf "\n\n $pkg: Installing package... ";
         cd "$pkg";
         cabal install
             -fwith-bytestring
@@ -93,7 +93,7 @@ script:
         instances-vector
         extra;
     do
-        printf "\n\n*** $pkg: Installing sdist package... ";
+        printf "\n\n $pkg: Installing sdist package... ";
         cd "$pkg";
         cabal configure;
         cabal sdist | sed -rn '$s/^[^:]+:\s+//p' | xargs cabal install
