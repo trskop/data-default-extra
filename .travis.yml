@@ -43,7 +43,7 @@ install:
         echo; echo;
         echo "$pkg:";
         cd "$pkg";
-        cabal install --only-dependencies
+        cabal install --only-dependencies;
         cd "..";
     done
 
