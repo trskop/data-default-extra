@@ -63,12 +63,19 @@ import Data.Default.Class (Default(def))
 import Data.Default.Instances.Base ()
 
 
+-- | @'def' = 'Const' 'def'@
 instance Default a => Default (Const a b) where
     def = Const def
 
+-- | @'def' = 'Kleisli' 'return'@
 instance Monad m => Default (Kleisli m a a) where
     def = Kleisli return
 
+#if MIN_VERSION_base(4,8,0)
+-- | @'def' = 'makeVersion' []@
+#else
+-- | @'def' = 'Version' [] []@
+#endif
 instance Default Version where
     def =
 #if MIN_VERSION_base(4,8,0)
@@ -78,37 +85,47 @@ instance Default Version where
 #endif
 
 #if MIN_VERSION_base(4,7,0)
+-- | @'def' = 'Proxy'@
 instance Default (Proxy a) where
     def = Proxy
 
+-- | @'def' = 'SomeNat' ('Proxy' :: 'Proxy' 0)@
 instance Default SomeNat where
     def = SomeNat (Proxy :: Proxy 0)
 
+-- | @'def' = 'SomeSymbol' ('Proxy' :: 'Proxy' \"\")@
 instance Default SomeSymbol where
     def = SomeSymbol (Proxy :: Proxy "")
 #endif
 
 #if MIN_VERSION_base(4,8,0)
+-- | @'def' = 'mempty'@
 instance Alternative f => Default (Alt f a) where
     def = mempty
 
+-- | @'def' = 'Identity' 'def'@
 instance Default a => Default (Identity a) where
     def = Identity def
 
+-- | @'def' = 0@
 instance Default Natural where
     def = 0
 #endif
 
 #if MIN_VERSION_base(4,9,0)
+-- | @'def' = 'def' ':|' []@
 instance Default a => Default (NonEmpty a) where
     def = def :| []
 
+-- | @'def' = 'minBound'@
 instance Bounded a => Default (Min a) where
     def = minBound
 
+-- | @'def' = 'maxBound'@
 instance Bounded a => Default (Max a) where
     def = maxBound
 
+-- | @'def' = 'Option' 'Nothing'@
 instance Default (Option a) where
     def = Option Nothing
 #endif
