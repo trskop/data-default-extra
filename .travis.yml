@@ -90,6 +90,7 @@ script:
         extra;
     do
         cd "$pkg";
+        cabal configure;
         cabal sdist | sed -rn '$s/^[^:]+:\s+//p' | xargs cabal install
             -fwith-bytestring
             -fwith-case-insensitive
