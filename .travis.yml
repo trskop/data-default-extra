@@ -27,7 +27,8 @@ matrix:
 before_install:
   - export PATH=/opt/ghc/$GHCVER/bin:/opt/cabal/$CABALVER/bin:$PATH
   - cd "extra"
-  - cabal add-source
+  - cabal sandbox init
+  - cabal sandbox add-source
         ../instances-bytestring
         ../instances-case-insensitive
         ../instances-new-base
