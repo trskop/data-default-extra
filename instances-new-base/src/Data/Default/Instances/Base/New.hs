@@ -10,7 +10,7 @@
 -- |
 -- Module:       $HEADER$
 -- Description:  Default instances for types in newer versions of base package.
--- Copyright:    (c) 2015, Peter Trško
+-- Copyright:    (c) 2015-2016, Peter Trško
 -- License:      BSD3
 --
 -- Maintainer:   peter.trsko@gmail.com
