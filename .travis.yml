@@ -44,14 +44,6 @@ install:
         echo "$pkg:";
         cd "$pkg";
         cabal install --only-dependencies
-            -fwith-bytestring
-            -fwith-case-insensitive
-            -fwith-containers
-            -fwith-dlist
-            -fwith-text
-            -fwith-old-locale
-            -fwith-unordered-containers
-            -fwith-vector;
         cd "..";
     done
 
@@ -97,6 +89,7 @@ script:
         cd "$pkg";
         cabal configure;
         cabal sdist | sed -rn '$s/^[^:]+:\s+//p' | xargs cabal install
+            --force-reinstalls
             -fwith-bytestring
             -fwith-case-insensitive
             -fwith-containers
