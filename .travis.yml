@@ -39,7 +39,6 @@ install:
         instances-text
         instances-unordered-containers
         instances-vector
-        extra;
     do
         echo; echo;
         echo "$pkg:";
@@ -79,7 +78,6 @@ script:
             -fwith-old-locale
             -fwith-unordered-containers
             -fwith-vector;
-        ghc-pkg list;
         cd "..";
     done
 
