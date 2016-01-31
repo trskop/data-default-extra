@@ -31,7 +31,8 @@ install:
   - cabal --version
   - echo "$(ghc --version) [$(ghc --print-project-git-commit-id 2> /dev/null || echo '?')]"
   - travis_retry cabal update
-  - for pkg in
+  - set -e;
+    for pkg in
         instances-bytestring
         instances-case-insensitive
         instances-new-base
@@ -54,7 +55,8 @@ install:
     done
 
 script:
-  - for pkg in
+  - set -e;
+    for pkg in
         instances-bytestring
         instances-case-insensitive
         instances-new-base
@@ -77,7 +79,8 @@ script:
     done
 
   # Following tests if sdist packages are created correctly.
-  - for pkg in
+  - set -e;
+    for pkg in
         instances-bytestring
         instances-case-insensitive
         instances-new-base
