@@ -41,3 +41,12 @@ library
     , data-default-class ==0.0.*
 
   ghc-options:          -Wall -fwarn-tabs
+
+source-repository head
+  type:                 git
+  location:             git://github.com/trskop/data-default-extra.git
+
+--source-repository this
+--  type:                 git
+--  location:             git://github.com/trskop/data-default-extra.git
+--  tag:                  bytestring-v0.0.1
