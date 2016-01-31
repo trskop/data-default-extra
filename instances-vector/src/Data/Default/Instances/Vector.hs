@@ -57,6 +57,6 @@ instance Unbox a => Default (Unboxed.Vector a) where
 -- instance 'Storable' a => 'Default' ('Storable.Vector' a) where
 --     'def' = 'Storable.empty'
 --
--- instance 'Unbox a => Default (Unboxed.Vector a) where
+-- instance 'Unbox' a => 'Default' ('Unboxed.Vector' a) where
 --     'def' = 'Unboxed.empty'
 -- @
