@@ -49,10 +49,11 @@ import Prelude (Bounded(maxBound, minBound))
 import Data.Functor.Const
     -- Const was moved from "Control.Applicative" in to its own module.
 import Data.List.NonEmpty (NonEmpty((:|)))
+import Data.Maybe Maybe(Nothing)
 import Data.Semigroup
     ( Min
     , Max
-    , Option
+    , Option(Option)
     )
 #else
 import Control.Applicative (Const(Const))
@@ -109,7 +110,7 @@ instance Bounded a => Default (Max a) where
     def = maxBound
 
 instance Default (Option a) where
-    def = mempty
+    def = Option Nothing
 #endif
 
 -- $providedInstances
@@ -166,7 +167,7 @@ instance Default (Option a) where
 --     'def' = maxBound
 --
 -- instance 'Default' ('Option' a) where
---     'def' = 'Data.Semigroup.Option' 'Data.Maybe.Nothing'
+--     'def' = 'Option' 'Nothing'
 -- @
 --
 -- This module also reexporting instances from "Data.Default.Instances.Base".
