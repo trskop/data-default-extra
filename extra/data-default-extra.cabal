@@ -1,0 +1,114 @@
+name:                   data-default-extra
+version:                0.0.1
+synopsis:               Default type class with a lot of extra instances.
+-- description:
+homepage:               https://github.com/trskop/data-default-extra
+license:                BSD3
+license-file:           LICENSE
+author:                 Peter Trško
+maintainer:             peter.trsko@gmail.com
+copyright:              (c) 2016, Peter Trško
+category:               Data
+build-type:             Simple
+cabal-version:          >=1.10
+
+extra-source-files:     ChangeLog.md, README.md
+
+flag with-bytestring
+  description:
+    Provide instances for (lazy and strict) ByteString and for ByteString
+    Builder.
+
+  default:              True
+  manual:               False
+
+flag with-case-insensitive
+  description:
+    Provide instance for CI (Case Insensitive) type wrapper.
+
+  default:              True
+  manual:               False
+
+flag with-containers
+  description:
+    Provide instances for Set, Map, IntMap, IntSet, Seq, and Tree.
+
+  default:              True
+  manual:               False
+
+flag with-dlist
+  description:          Provide instance for DList type.
+  default:              False
+  manual:               False
+
+flag with-text
+  description:
+    Provide instance for (strict and lazy) Text and Text Builder.
+
+  default:              True
+  manual:               False
+
+flag with-old-locale
+  description:          Provide instance for TimeLocale type.
+  default:              True
+  manual:               False
+
+flag with-unordered-containers
+  description:          Provide instances for HashMap and HashSet.
+  default:              True
+  manual:               False
+
+flag with-vector
+  description:
+    Provide instances for various (boxed and unboxed) Vector types.
+
+  default:              True
+  manual:               False
+
+library
+  hs-source-dirs:       src
+  exposed-modules:      Data.Default
+  -- other-modules:
+
+  default-language:     Haskell2010
+  other-extensions:     CPP, NoImplicitPrelude
+
+  build-depends:
+      base <6
+    , data-default-class ==0.0.*
+    , data-default-instances-base ==0.0.*
+    , data-default-instances-new-base ==0.0.*
+
+  if flag(with-bytestring)
+    build-depends:      data-default-instances-bytestring ==0.0.*
+    cpp-options:        -DWITH_bytestring
+
+  if flag(with-case-insensitive)
+    build-depends:      data-default-instances-case-insensitive ==0.0.*
+    cpp-options:        -DWITH_case_insensitive
+
+  if flag(with-containers)
+    build-depends:      data-default-instances-containers ==0.0.*
+    cpp-options:        -DWITH_containers
+
+  if flag(with-dlist)
+    build-depends:      data-default-instances-dlist ==0.0.*
+    cpp-options:        -DWITH_dlist
+
+  if flag(with-text)
+    build-depends:      data-default-instances-text ==0.0.*
+    cpp-options:        -DWITH_text
+
+  if flag(with-old-locale)
+    build-depends:      data-default-instances-old-locale ==0.0.*
+    cpp-options:        -DWITH_old_locale
+
+  if flag(with-unordered-containers)
+    build-depends:      data-default-instances-unordered-containers ==0.0.*
+    cpp-options:        -DWITH_unordered_containers
+
+  if flag(with-vector)
+    build-depends:      data-default-instances-vector ==0.0.*
+    cpp-options:        -DWITH_vector
+
+  ghc-options:          -Wall -fwarn-tabs
