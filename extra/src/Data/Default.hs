@@ -12,7 +12,12 @@
 --
 -- TODO
 module Data.Default
-    ( Default(def)
+    (
+    -- | 'Default' type class provides a default value of a type 'def'. In case
+    -- when that type has an instance for 'Data.Monoid.Monoid', then the
+    -- default value should be 'Data.Monoid.mempty', otherwise it cause a
+    -- confusion.
+      Default(def)
     , defOf
     )
   where
