@@ -42,7 +42,7 @@ library
     , TypeOperators
 
   build-depends:
-      base >=4.6 && <5
+      base <5
     , data-default-class ==0.0.*
 
   if impl(ghc < 7.6)
