@@ -33,6 +33,7 @@ install:
   - travis_retry cabal update
   - set -e;
     for pkg in
+        generic
         instances-bytestring
         instances-case-insensitive
         instances-new-base
@@ -48,8 +49,10 @@ install:
     done
 
 script:
+  # Package "extra" has to be last, since it uses the other packages.
   - set -e;
     for pkg in
+        generic
         instances-bytestring
         instances-case-insensitive
         instances-new-base
@@ -76,6 +79,7 @@ script:
   # Following tests if sdist packages are created correctly.
   - set -e;
     for pkg in
+        generic
         instances-bytestring
         instances-case-insensitive
         instances-new-base
