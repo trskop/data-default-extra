@@ -44,7 +44,7 @@ Following instances are available only for [base][] >= 4.8.0.0:
 
 ```Haskell
 instance Alternative f => Default (Alt f a) where
-    def = Data.Monoid.Alt Control.Applicative.empty
+    def = Alt empty
 
 instance Default a => Default (Identity a) where
     def = Identity def
