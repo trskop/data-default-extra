@@ -8,7 +8,11 @@
 
 # Description
 
-`Default` instances for types in newer versions of [base][] package:
+Orphan instances for `Default` type class, which is defined in package
+[data-default-class][].
+
+In addition to instances reexported from [data-default-instances-base][]
+package, following `Default` instances are provided:
 
 ```Haskell
 instance Default a => Default (Const a b) where
@@ -87,6 +91,9 @@ afraid to contact author using GitHub or by e-mail.
 [data-default-class]:
   https://hackage.haskell.org/package/data-default-class
   "Package data-default-class on Hackage"
+[data-default-instances-base]:
+  https://hackage.haskell.org/package/data-default-instances-base
+  "Package data-default-instances-base on Hackage"
 [Haskell.org]:
   http://www.haskell.org
   "The Haskell Programming Language"
