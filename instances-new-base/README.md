@@ -1,6 +1,6 @@
 # data-default-instances-new-base
 
-[![Hackage](http://img.shields.io/hackage/v/data-default-instances-new-base.svg)][Hackage: data-default-instances-new-base]
+[![Hackage](http://img.shields.io/hackage/v/data-default-instances-new-base.svg)][data-default-instances-new-base]
 [![Hackage Dependencies](https://img.shields.io/hackage-deps/v/data-default-instances-new-base.svg)](http://packdeps.haskellers.com/reverse/data-default-instances-new-base)
 [![Haskell Programming Language](https://img.shields.io/badge/language-Haskell-blue.svg)][Haskell.org]
 [![BSD3 License](http://img.shields.io/badge/license-BSD3-brightgreen.svg)][tl;dr Legal: BSD3]
@@ -96,6 +96,9 @@ afraid to contact author using GitHub or by e-mail.
 [data-default-instances-base]:
   https://hackage.haskell.org/package/data-default-instances-base
   "Package data-default-instances-base on Hackage"
+[data-default-instances-new-base]:
+  https://hackage.haskell.org/package/data-default-instances-new-base
+  "Package data-default-instances-new-base on Hackage"
 [Haskell.org]:
   http://www.haskell.org
   "The Haskell Programming Language"
