@@ -1,5 +1,7 @@
 # data-default-instances-text
 
+[![Hackage](http://img.shields.io/hackage/v/data-default-instances-text.svg)][data-default-instances-text]
+[![Hackage Dependencies](https://img.shields.io/hackage-deps/v/data-default-instances-text.svg)](http://packdeps.haskellers.com/reverse/data-default-instances-text)
 [![Haskell Programming Language](https://img.shields.io/badge/language-Haskell-blue.svg)][Haskell.org]
 [![BSD3 License](http://img.shields.io/badge/license-BSD3-brightgreen.svg)][tl;dr Legal: BSD3]
 
@@ -51,6 +53,9 @@ afraid to contact author using GitHub or by e-mail.
 [data-default-class]:
   https://hackage.haskell.org/package/data-default-class
   "Package data-default-class on Hackage"
+[data-default-instances-text]:
+  https://hackage.haskell.org/package/data-default-instances-text
+  "Package data-default-instances-text on Hackage"
 [Haskell.org]:
   http://www.haskell.org
   "The Haskell Programming Language"
