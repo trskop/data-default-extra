@@ -3,11 +3,25 @@ version:                0.0.1
 synopsis:
   Default instances for (lazy and strict) Text and Text Builder.
 description:
-  This package is intended to be used in conjunction with
-  <https://hackage.haskell.org/package/data-default data-default> package or
-  directly with
-  <https://hackage.haskell.org/package/data-default-class data-default-class>
-  package.
+  Orphan instances for @Default@ type class, which is defined in package
+  <https://hackage.haskell.org/package/data-default-class data-default-class>.
+  .
+  Following @Default@ instances are provided:
+  .
+  > -- Strict Text:
+  > instance Default Text where
+  >     def = empty
+  >
+  > -- Lazy Text:
+  > instance Default Text where
+  >     def = empty
+  .
+  Following instances are provided only for
+  <https://hackage.haskell.org/package/text text> >=0.8, since that it the
+  version that introduced @Builder@:
+  .
+  > instance Default Builder where
+  >     def = mempty
 
 homepage:               https://github.com/trskop/data-default-extra
 bug-reports:            https://github.com/trskop/data-default-extra/issues
