@@ -26,8 +26,8 @@ Following instances are provided only for [text][] >=0.8, since that
 it the version that introduced `Builder`:
 
 ```Haskell
-instance 'Default' 'Builder' where
-    'def' = 'mempty'
+instance Default Builder where
+    def = mempty
 ```
 
 This package is intended to be used in conjunction with [data-default][]
