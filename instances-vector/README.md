@@ -1,5 +1,7 @@
 # data-default-instances-vector
 
+[![Hackage](http://img.shields.io/hackage/v/data-default-instances-vector.svg)][data-default-instances-vector]
+[![Hackage Dependencies](https://img.shields.io/hackage-deps/v/data-default-instances-vector.svg)](http://packdeps.haskellers.com/reverse/data-default-instances-vector)
 [![Haskell Programming Language](https://img.shields.io/badge/language-Haskell-blue.svg)][Haskell.org]
 [![BSD3 License](http://img.shields.io/badge/license-BSD3-brightgreen.svg)][tl;dr Legal: BSD3]
 
@@ -42,6 +44,9 @@ afraid to contact author using GitHub or by e-mail.
 [data-default-class]:
   https://hackage.haskell.org/package/data-default-class
   "Package data-default-class on Hackage"
+[data-default-instances-vector]:
+  https://hackage.haskell.org/package/data-default-instances-vector
+  "Package data-default-instances-vector on Hackage"
 [Haskell.org]:
   http://www.haskell.org
   "The Haskell Programming Language"
