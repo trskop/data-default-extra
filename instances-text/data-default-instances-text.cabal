@@ -60,7 +60,7 @@ source-repository head
   type:                 git
   location:             git://github.com/trskop/data-default-extra.git
 
---source-repository this
---  type:                 git
---  location:             git://github.com/trskop/data-default-extra.git
---  tag:                  text-v0.0.1
+source-repository this
+  type:                 git
+  location:             git://github.com/trskop/data-default-extra.git
+  tag:                  text-v0.0.1
