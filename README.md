@@ -13,22 +13,28 @@ List of provided packages:
 
 * `data-default-extra` - Alternative to [data-default][] package with extra
   instances.
+
 * [![Hackage](http://img.shields.io/hackage/v/data-default-instances-bytestring.svg)][data-default-instances-bytestring]
   [![Hackage Dependencies](https://img.shields.io/hackage-deps/v/data-default-instances-bytestring.svg)](http://packdeps.haskellers.com/reverse/data-default-instances-bytestring)
   `data-default-instances-bytestring` - Default instances for (lazy and strict)
   ByteString, ByteString Builder and ShortByteString.
+
 * `data-default-instances-case-insensitive` - Provides instance for CI (Case
   Insensitive) type wrapper.
+
 * [![Hackage](http://img.shields.io/hackage/v/data-default-instances-new-base.svg)][data-default-instances-new-base]
   [![Hackage Dependencies](https://img.shields.io/hackage-deps/v/data-default-instances-new-base.svg)](http://packdeps.haskellers.com/reverse/data-default-instances-new-base)
   `data-default-instances-new-base` - Additional instances for types in newer
   versions of base package.
+
 * [![Hackage](http://img.shields.io/hackage/v/data-default-instances-text.svg)][data-default-instances-text]
   [![Hackage Dependencies](https://img.shields.io/hackage-deps/v/data-default-instances-text.svg)](http://packdeps.haskellers.com/reverse/data-default-instances-text)
   `data-default-instances-text` - Default instances for (lazy and strict) Text
   and Text Builder.
+
 * `data-default-instances-unordered-containers` - Provide instances for HashMap
   and HashSet.
+
 * `data-default-instances-vector` - Provide instances for various (boxed and
   unboxed) Vector types.
 
