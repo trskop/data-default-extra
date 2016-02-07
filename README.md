@@ -14,12 +14,17 @@ List of provided packages:
 * `data-default-extra` - Alternative to [data-default][] package with extra
   instances.
 
+* `data-default-extra-generic` - Define instances of `Default` type class using
+  GHC Generics.
+
 * [![Hackage](http://img.shields.io/hackage/v/data-default-instances-bytestring.svg)][data-default-instances-bytestring]
   [![Hackage Dependencies](https://img.shields.io/hackage-deps/v/data-default-instances-bytestring.svg)](http://packdeps.haskellers.com/reverse/data-default-instances-bytestring)
   `data-default-instances-bytestring` - Default instances for (lazy and strict)
   ByteString, ByteString Builder and ShortByteString.
 
-* `data-default-instances-case-insensitive` - Provides instance for CI (Case
+* [![Hackage](http://img.shields.io/hackage/v/data-default-instances-case-insensitive.svg)][data-default-instances-case-insensitive]
+  [![Hackage Dependencies](https://img.shields.io/hackage-deps/v/data-default-instances-case-insensitive.svg)](http://packdeps.haskellers.com/reverse/data-default-instances-case-insensitive)
+  `data-default-instances-case-insensitive` - Provides instance for CI (Case
   Insensitive) type wrapper.
 
 * [![Hackage](http://img.shields.io/hackage/v/data-default-instances-new-base.svg)][data-default-instances-new-base]
@@ -54,12 +59,16 @@ Contributions, pull requests and bug reports are welcome! Please don't be
 afraid to contact author using GitHub or by e-mail.
 
 
+
 [data-default]:
   https://hackage.haskell.org/package/data-default
   "Hackage: data-default"
 [data-default-instances-bytestring]:
   https://hackage.haskell.org/package/data-default-instances-bytestring
   "Package data-default-instances-bytestring on Hackage"
+[data-default-instances-case-insensitive]:
+  https://hackage.haskell.org/package/data-default-instances-case-insensitive
+  "Package data-default-instances-case-insensitive on Hackage"
 [data-default-instances-new-base]:
   https://hackage.haskell.org/package/data-default-instances-new-base
   "Package data-default-instances-new-base on Hackage"
