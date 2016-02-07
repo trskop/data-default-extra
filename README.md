@@ -13,13 +13,19 @@ List of provided packages:
 
 * `data-default-extra` - Alternative to [data-default][] package with extra
   instances.
-* `data-default-instances-bytestring` - Default instances for (lazy and strict)
+* [![Hackage](http://img.shields.io/hackage/v/data-default-instances-bytestring.svg)][data-default-instances-bytestring]
+  [![Hackage Dependencies](https://img.shields.io/hackage-deps/v/data-default-instances-bytestring.svg)](http://packdeps.haskellers.com/reverse/data-default-instances-bytestring)
+  `data-default-instances-bytestring` - Default instances for (lazy and strict)
   ByteString, ByteString Builder and ShortByteString.
 * `data-default-instances-case-insensitive` - Provides instance for CI (Case
   Insensitive) type wrapper.
-* `data-default-instances-new-base` - Additional instances for types in newer
+* [![Hackage](http://img.shields.io/hackage/v/data-default-instances-new-base.svg)][data-default-instances-new-base]
+  [![Hackage Dependencies](https://img.shields.io/hackage-deps/v/data-default-instances-new-base.svg)](http://packdeps.haskellers.com/reverse/data-default-instances-new-base)
+  `data-default-instances-new-base` - Additional instances for types in newer
   versions of base package.
-* `data-default-instances-text` - Default instances for (lazy and strict) Text
+* [![Hackage](http://img.shields.io/hackage/v/data-default-instances-text.svg)][data-default-instances-text]
+  [![Hackage Dependencies](https://img.shields.io/hackage-deps/v/data-default-instances-text.svg)](http://packdeps.haskellers.com/reverse/data-default-instances-text)
+  `data-default-instances-text` - Default instances for (lazy and strict) Text
   and Text Builder.
 * `data-default-instances-unordered-containers` - Provide instances for HashMap
   and HashSet.
@@ -41,6 +47,15 @@ afraid to contact author using GitHub or by e-mail.
 [data-default]:
   https://hackage.haskell.org/package/data-default
   "Hackage: data-default"
+[data-default-instances-bytestring]:
+  https://hackage.haskell.org/package/data-default-instances-bytestring
+  "Package data-default-instances-bytestring on Hackage"
+[data-default-instances-new-base]:
+  https://hackage.haskell.org/package/data-default-instances-new-base
+  "Package data-default-instances-new-base on Hackage"
+[data-default-instances-text]:
+  https://hackage.haskell.org/package/data-default-instances-text
+  "Package data-default-instances-text on Hackage"
 [Haskell.org]:
   http://www.haskell.org
   "The Haskell Programming Language"
