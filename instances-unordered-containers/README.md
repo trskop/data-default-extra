@@ -1,5 +1,7 @@
 # data-default-instances-unordered-containers
 
+[![Hackage](http://img.shields.io/hackage/v/data-default-instances-unordered-containers.svg)][data-default-instances-unordered-containers]
+[![Hackage Dependencies](https://img.shields.io/hackage-deps/v/data-default-instances-unordered-containers.svg)](http://packdeps.haskellers.com/reverse/data-default-instances-unordered-containers)
 [![Haskell Programming Language](https://img.shields.io/badge/language-Haskell-blue.svg)][Haskell.org]
 [![BSD3 License](http://img.shields.io/badge/license-BSD3-brightgreen.svg)][tl;dr Legal: BSD3]
 
@@ -39,6 +41,9 @@ afraid to contact author using GitHub or by e-mail.
 [data-default-class]:
   https://hackage.haskell.org/package/data-default-class
   "Hackage: data-default-class"
+[data-default-instances-unordered-containers]:
+  https://hackage.haskell.org/package/data-default-instances-unordered-containers
+  "Package data-default-instances-unordered-containers on Hackage"
 [Haskell.org]:
   http://www.haskell.org
   "The Haskell Programming Language"
