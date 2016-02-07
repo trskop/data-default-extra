@@ -38,6 +38,7 @@ description:
   mental model, or theoretical models with real axioms, then just don't use it.
 
 homepage:               https://github.com/trskop/data-default-extra
+bug-reports:            https://github.com/trskop/data-default-extra/issues
 license:                BSD3
 license-file:           LICENSE
 author:                 Peter Trško

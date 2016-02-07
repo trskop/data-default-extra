@@ -19,6 +19,7 @@ description:
   MyType 0 Nothing
 
 homepage:               https://github.com/trskop/data-default-extra
+bug-reports:            https://github.com/trskop/data-default-extra/issues
 license:                BSD3
 license-file:           LICENSE
 author:                 Peter Trško
