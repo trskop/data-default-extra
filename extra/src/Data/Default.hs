@@ -15,8 +15,8 @@ module Data.Default
     (
     -- | 'Default' type class provides a default value ('def') of a type. In
     -- case when a particluar type has an instance for 'Data.Monoid.Monoid',
-    -- then the default value, for the same type, should be
-    -- 'Data.Monoid.mempty', otherwise it can cause a great deal of confusion.
+    -- then the default value should be 'Data.Monoid.mempty', otherwise it can
+    -- cause a great deal of confusion.
     --
     -- One must understand, that 'Default' type class, has no axioms associated
     -- with it. Its purpose is to minimize:
@@ -40,7 +40,7 @@ module Data.Default
     -- one is not a big enough sample.
     --
     -- That said, using 'Default' may not always be a good idea. If it breaks
-    -- peoples mental model, or theoretical models with real axioms, then just
+    -- peoples mental models, or theoretical models with real axioms, then just
     -- don't use it.
       Default(def)
     , defOf

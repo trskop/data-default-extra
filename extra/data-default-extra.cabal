@@ -10,9 +10,8 @@ description:
   provides a lot of additional instances for @Default@ type class.
   .
   @Default@ type class provides a default value (@def@) of a type. In case when
-  a particluar type has an instance for @Monoid@, then the default value, for
-  the same type, should be @mempty@, otherwise it can cause a great deal of
-  confusion.
+  a particluar type has an instance for @Monoid@, then the default value should
+  be @mempty@, otherwise it can cause a great deal of confusion.
   .
   One must understand, that @Default@ type class, has no axioms associated with
   it. Its purpose is to minimize:
