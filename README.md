@@ -47,6 +47,9 @@ List of provided packages:
   `data-default-instances-vector` - Provide instances for various (boxed and
   unboxed) Vector types.
 
+Above packages try to mimick naming and versioning conventions of original
+`data-default-*` packages.
+
 
 ## License
 
