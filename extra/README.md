@@ -37,11 +37,12 @@ document what `def` means for particular type, and always check that
 `def` is sensible, by testing it on a real world sample of human beings,
 one is not a big enough sample.
 
-That said, using `Default` may not be always good idea. If it breaks
+That said, using `Default` may not always be a good idea. If it breaks
 peoples mental model, or theoretical models with real axioms, then just
 don't use it.
 
-This package, in most part, just reexports a set of packages that provide additional instances for [data-default-class][] package.
+This package, in most part, just reexports a set of packages that provide
+additional instances for [data-default-class][] package.
 
 
 ## License
