@@ -1,7 +1,7 @@
 name:                   data-default-instances-bytestring
 version:                0.0.1
 synopsis:
-  Default instances for (lazy and strict) ByteString, ByteString Builder and
+  Default instances for (lazy and strict) ByteString, Builder and
   ShortByteString.
 description:
   Orphan instances for @Default@ type class, which is defined in package
