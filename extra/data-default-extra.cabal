@@ -1,9 +1,6 @@
 name:                   data-default-extra
 version:                0.0.1
-
-synopsis:
-  A class for types with a default value with a lot of instances for standard
-  types.
+synopsis:               A class for types with a default value.
 description:
   An alternative to
   <https://hackage.haskell.org/package/data-default data-default> package, that
@@ -29,13 +26,13 @@ description:
   As one may notice, most of the listed problems, that @Default@ type class
   tries to solve, to various degrees of success, are for human benefit, and not
   theoretically founded. Because of this, please always try hard to define
-  sensible instances of @Default@. Most importantly document what @def@ means
+  sensible instances of @Default@. Most importantly, document what @def@ means
   for particular type, and always check that @def@ is sensible, by testing it
   on a real world sample of human beings, one is not a big enough sample.
   .
   That said, using @Default@ may not always be a good idea. If it breaks
-  peoples mental model, or theoretical models with real axioms, then just don't
-  use it.
+  people's mental model, or theoretical models with real axioms, then just
+  don't use it.
 
 homepage:               https://github.com/trskop/data-default-extra
 bug-reports:            https://github.com/trskop/data-default-extra/issues
@@ -165,7 +162,7 @@ source-repository head
   type:                 git
   location:             git://github.com/trskop/data-default-extra.git
 
---source-repository this
---  type:                 git
---  location:             git://github.com/trskop/data-default-extra.git
---  tag:                  v0.0.1
+source-repository this
+  type:                 git
+  location:             git://github.com/trskop/data-default-extra.git
+  tag:                  v0.0.1

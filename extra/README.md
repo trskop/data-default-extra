@@ -34,11 +34,11 @@ it. Its purpose is to minimize:
 As one may notice, most of the listed problems, that `Default` type class tries
 to solve, to various degrees of success, are for human benefit, and not
 theoretically founded. Because of this, please always try hard to define
-sensible instances of `Default`. Most importantly document what `def` means for
-particular type, and always check that `def` is sensible, by testing it on a
-real world sample of human beings, one is not a big enough sample.
+sensible instances of `Default`. Most importantly, document what `def` means
+for particular type, and always check that `def` is sensible, by testing it on
+a real world sample of human beings, one is not a big enough sample.
 
-That said, using `Default` may not always be a good idea. If it breaks peoples
+That said, using `Default` may not always be a good idea. If it breaks people's
 mental models, or theoretical models with real axioms, then just don't use it.
 
 This package, in most part, just reexports a set of packages that provide
@@ -52,7 +52,12 @@ Create `Default` instances using [GHC Generics][].
 Usage example:
 
 ```Haskell
+{-# LANGUAGE DeriveGeneric #-}
+
+import GHC.Generics (Generic)
+
 data MyType = MyType Int (Maybe String)
+  deriving (Generic, Show)
 
 instance Default MyType where
     def = genericDef
