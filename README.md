@@ -11,7 +11,9 @@
 Set of packages that provide additional instances for [data-default][] package.
 List of provided packages:
 
-* `data-default-extra` - Alternative to [data-default][] package with extra
+* [![Hackage](http://img.shields.io/hackage/v/data-default-instances-extra.svg)][data-default-instances-extra]
+  [![Hackage Dependencies](https://img.shields.io/hackage-deps/v/data-default-instances-extra.svg)](http://packdeps.haskellers.com/reverse/data-default-instances-extra)
+  `data-default-extra` - Alternative to [data-default][] package with extra
   instances and support for [GHC Generics][].
 
 * [![Hackage](http://img.shields.io/hackage/v/data-default-instances-bytestring.svg)][data-default-instances-bytestring]
@@ -63,6 +65,9 @@ afraid to contact author using GitHub or by e-mail.
 [data-default]:
   https://hackage.haskell.org/package/data-default
   "Hackage: data-default"
+[data-default-instances-extra]:
+  https://hackage.haskell.org/package/data-default-instances-extra
+  "Package data-default-instances-extra on Hackage"
 [data-default-instances-bytestring]:
   https://hackage.haskell.org/package/data-default-instances-bytestring
   "Package data-default-instances-bytestring on Hackage"
