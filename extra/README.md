@@ -43,6 +43,25 @@ This package, in most part, just reexports a set of packages that provide
 additional instances for [data-default-class][] package.
 
 
+## GHC Generics
+
+Create `Default` instances using [GHC Generics][].
+
+Usage example:
+
+```Haskell
+data MyType = MyType Int (Maybe String)
+
+instance Default MyType where
+    def = genericDef
+```
+
+```
+λ> def :: MyType
+MyType 0 Nothing
+```
+
+
 ## License
 
 The BSD 3-Clause License, see [LICENSE][] file for details.
@@ -60,6 +79,9 @@ afraid to contact author using GitHub or by e-mail.
 [data-default-class]:
   https://hackage.haskell.org/package/data-default
   "Hackage: data-default-class"
+[GHC Generics]:
+  https://wiki.haskell.org/GHC.Generics
+  "GHC.Generics on HaskellWiki"
 [Haskell.org]:
   http://www.haskell.org
   "The Haskell Programming Language"
