@@ -12,10 +12,7 @@ Set of packages that provide additional instances for [data-default][] package.
 List of provided packages:
 
 * `data-default-extra` - Alternative to [data-default][] package with extra
-  instances.
-
-* `data-default-extra-generic` - Define instances of `Default` type class using
-  GHC Generics.
+  instances and support for [GHC Generics][].
 
 * [![Hackage](http://img.shields.io/hackage/v/data-default-instances-bytestring.svg)][data-default-instances-bytestring]
   [![Hackage Dependencies](https://img.shields.io/hackage-deps/v/data-default-instances-bytestring.svg)](http://packdeps.haskellers.com/reverse/data-default-instances-bytestring)
@@ -84,6 +81,9 @@ afraid to contact author using GitHub or by e-mail.
 [data-default-instances-vector]:
   https://hackage.haskell.org/package/data-default-instances-vector
   "Package data-default-instances-vector on Hackage"
+[GHC Generics]:
+  https://wiki.haskell.org/GHC.Generics
+  "GHC.Generics on HaskellWiki"
 [Haskell.org]:
   http://www.haskell.org
   "The Haskell Programming Language"
