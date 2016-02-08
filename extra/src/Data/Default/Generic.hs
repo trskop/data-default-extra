@@ -18,14 +18,22 @@
 -- * <https://wiki.haskell.org/GHC.Generics HaskellWiki: GHC.Generics>
 module Data.Default.Generic
     (
-    -- | Rule of thumb, if generic instance definition, defined by employing
-    -- this module, contains more code then the explicit definition, then use
-    -- the explicit definition.
+    -- | Rule of thumb, if generic instance definition, contains more code then
+    -- the explicit definition, then use the explicit definition.
+    --
+    -- Note, that sum types aren't supported, but even if they were, it is
+    -- always better to explicitly specify 'Default' instance for sum types.
     --
     -- Usage example:
     --
     -- @
+    -- {-\# LANGUAGE DeriveGeneric \#-}
+    --
+    -- import GHC.Generics (Generic)
+    --
+    --
     -- data MyType = MyType Int (Maybe String)
+    --   deriving (Generic, Show)
     --
     -- instance 'Default' MyType where
     --     'def' = 'genericDef'
