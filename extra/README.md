@@ -1,7 +1,7 @@
 # data-default-extra
 
-[![Hackage](http://img.shields.io/hackage/v/data-default-instances-extra.svg)][data-default-instances-extra]
-[![Hackage Dependencies](https://img.shields.io/hackage-deps/v/data-default-instances-extra.svg)](http://packdeps.haskellers.com/reverse/data-default-instances-extra)
+[![Hackage](http://img.shields.io/hackage/v/data-default-extra.svg)][data-default-extra]
+[![Hackage Dependencies](https://img.shields.io/hackage-deps/v/data-default-extra.svg)](http://packdeps.haskellers.com/reverse/data-default-extra)
 [![Haskell Programming Language](https://img.shields.io/badge/language-Haskell-blue.svg)][Haskell.org]
 [![BSD3 License](http://img.shields.io/badge/license-BSD3-brightgreen.svg)][tl;dr Legal: BSD3]
 
@@ -86,9 +86,9 @@ afraid to contact author using GitHub or by e-mail.
 [data-default-class]:
   https://hackage.haskell.org/package/data-default
   "Hackage: data-default-class"
-[data-default-instances-extra]:
-  https://hackage.haskell.org/package/data-default-instances-extra
-  "Package data-default-instances-extra on Hackage"
+[data-default-extra]:
+  https://hackage.haskell.org/package/data-default-extra
+  "Package data-default-extra on Hackage"
 [GHC Generics]:
   https://wiki.haskell.org/GHC.Generics
   "GHC.Generics on HaskellWiki"
