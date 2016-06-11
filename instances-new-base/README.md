@@ -36,7 +36,7 @@ instance Default (Proxy a) where
 instance Default SomeNat where
     def = SomeNat (Proxy :: Proxy 0)
 
-instance Default SomeNat where
+instance Default SomeSymbol where
     def = SomeSymbol (Proxy :: Proxy "")
 ```
 

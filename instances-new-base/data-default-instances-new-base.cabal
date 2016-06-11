@@ -28,7 +28,7 @@ description:
   > instance Default SomeNat where
   >     def = SomeNat (Proxy :: Proxy 0)
   >
-  > instance Default SomeNat where
+  > instance Default SomeSymbol where
   >     def = SomeSymbol (Proxy :: Proxy "")
   .
   Following instances are available only for base >= 4.8.0.0:
