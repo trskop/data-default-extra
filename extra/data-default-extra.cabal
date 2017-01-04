@@ -116,8 +116,8 @@ library
 
   build-depends:
       base <6
-    , data-default-class ==0.0.*
-    , data-default-instances-base ==0.0.*
+    , data-default-class <0.2
+    , data-default-instances-base <0.2
     , data-default-instances-new-base ==0.0.*
 
   if impl(ghc <7.6)
