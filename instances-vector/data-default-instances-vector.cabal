@@ -41,7 +41,7 @@ library
 
   build-depends:
       vector >=0.5 && <1
-    , data-default-class ==0.0.*
+    , data-default-class <0.2
 
   ghc-options:          -Wall -fwarn-tabs
 
