@@ -1,5 +1,5 @@
 name:                   data-default-instances-bytestring
-version:                0.0.1
+version:                0.0.1.1
 synopsis:
   Default instances for (lazy and strict) ByteString, Builder and
   ShortByteString.
@@ -37,7 +37,7 @@ license:                BSD3
 license-file:           LICENSE
 author:                 Peter Trško
 maintainer:             peter.trsko@gmail.com
-copyright:              (c) 2016, Peter Trško
+copyright:              (c) 2016 Peter Trško
 category:               Data
 build-type:             Simple
 cabal-version:          >=1.10
@@ -59,8 +59,7 @@ library
     -- really matter, unless Monoid class is drastically changed.
     , bytestring >=0.9 && <1
     -- ^ Version 0.9 is the oldest available on Hackage.
-
-    , data-default-class <0.2
+    , data-default-class >=0.0.1 && <0.2
 
   ghc-options:          -Wall -fwarn-tabs
 
@@ -71,4 +70,4 @@ source-repository head
 source-repository this
   type:                 git
   location:             git://github.com/trskop/data-default-extra.git
-  tag:                  bytestring-v0.0.1
+  tag:                  class-0.1

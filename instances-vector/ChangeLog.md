@@ -7,6 +7,12 @@
 * Uploaded to [Hackage][]: <http://hackage.haskell.org/package/data-default-instances-vector-0.0.1>
 
 
+## Version 0.0.1.1
+
+* Support for `data-default-class ==0.1.*`.
+* Not uploaded to [Hackage][]. New metadata revision was introduced instead.
+
+
 
 [Hackage]:
   http://hackage.haskell.org/

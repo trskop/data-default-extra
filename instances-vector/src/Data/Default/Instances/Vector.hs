@@ -3,7 +3,7 @@
 -- |
 -- Module:       $HEADER$
 -- Description:  Default instances for types defined in vector package.
--- Copyright:    (c) 2015-2016, Peter Trško
+-- Copyright:    (c) 2015-2016 Peter Trško
 -- License:      BSD3
 --
 -- Maintainer:   peter.trsko@gmail.com

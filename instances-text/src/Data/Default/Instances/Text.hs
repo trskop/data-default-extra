@@ -4,7 +4,7 @@
 -- |
 -- Module:       $HEADER$
 -- Description:  Default instances for (strict and lazy) Text and Text Builder.
--- Copyright:    (c) 2016, Peter Trško
+-- Copyright:    (c) 2016 Peter Trško
 -- License:      BSD3
 --
 -- Maintainer:   peter.trsko@gmail.com

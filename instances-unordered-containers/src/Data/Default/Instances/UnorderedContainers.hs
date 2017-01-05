@@ -3,7 +3,7 @@
 -- |
 -- Module:       $HEADER$
 -- Description:  Default instances for HashMap and HashSet.
--- Copyright:    (c) 2015, Peter Trško
+-- Copyright:    (c) 2015 Peter Trško
 -- License:      BSD3
 --
 -- Maintainer:   peter.trsko@gmail.com

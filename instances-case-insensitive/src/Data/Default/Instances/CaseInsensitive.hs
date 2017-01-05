@@ -3,13 +3,12 @@
 -- |
 -- Module:       $HEADER$
 -- Description:  Default instance for CI type from case-insensitive package.
--- Copyright:    (c) 2015, Peter Trško
+-- Copyright:    (c) 2015 Peter Trško
 -- License:      BSD3
 --
 -- Maintainer:   peter.trsko@gmail.com
 -- Stability:    stable
--- Portability:  CPP, DataKinds (for base >=4.7.0.0), FlexibleInstances,
---               NoImplicitPrelude
+-- Portability:  NoImplicitPrelude
 --
 -- 'Default' instance for 'CI' type from
 -- <https://hackage.haskell.org/package/case-insensitive case-insensitive>
