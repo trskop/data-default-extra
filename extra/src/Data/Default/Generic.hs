@@ -1,22 +1,33 @@
+{-# LANGUAGE CPP #-}
 {-# LANGUAGE FlexibleContexts #-}
 {-# LANGUAGE NoImplicitPrelude #-}
 {-# LANGUAGE TypeOperators #-}
 -- |
 -- Module:       $HEADER$
 -- Description:  Create Default instances using GHC Generics.
--- Copyright:    (c) 2016, Peter Trško
+-- Copyright:    (c) 2016-2017 Peter Trško
 -- License:      BSD3
 --
 -- Maintainer:   peter.trsko@gmail.com
 -- Stability:    stable
--- Portability:  FlexibleContexts, NoImplicitPrelude, TypeOperators
+-- Portability:  GHC specific language extension.
+--
+-- __DEPRECATED__ because package
+-- <https://hackage.haskell.org/package/data-default-class data-default-class>
+-- now supports GHC Generics.
 --
 -- Create 'Default' instances using GHC Generics. For more information see:
 --
 -- * <https://downloads.haskell.org/~ghc/latest/docs/html/users_guide/ GHC User's Guide>
 --
 -- * <https://wiki.haskell.org/GHC.Generics HaskellWiki: GHC.Generics>
+--
+-- Package
+-- <https://hackage.haskell.org/package/data-default-class data-default-class>
+-- supports GHC Generics since version 0.1.0, but it is still useful to have
+-- 'GDefault' and 'genericDef' exposed for more complex cases.
 module Data.Default.Generic
+     {-# DEPRECATED "Use DefaultSignatures or DeriveAnyClass language extension instead." #-}
     (
     -- | Rule of thumb, if generic instance definition, contains more code then
     -- the explicit definition, then use the explicit definition.

@@ -10,13 +10,12 @@
 -- |
 -- Module:       $HEADER$
 -- Description:  Default instances for types in newer versions of base package.
--- Copyright:    (c) 2015-2016, Peter Trško
+-- Copyright:    (c) 2015-2017 Peter Trško
 -- License:      BSD3
 --
 -- Maintainer:   peter.trsko@gmail.com
 -- Stability:    stable
--- Portability:  CPP, DataKinds (for base >=4.7.0.0), FlexibleInstances,
---               NoImplicitPrelude
+-- Portability:  GHC specific language extensions.
 --
 -- 'Default' instances for types in newer versions of
 -- <https://hackage.haskell.org/package/base base> package.
@@ -60,7 +59,10 @@ import Control.Applicative (Const(Const))
 #endif
 
 import Data.Default.Class (Default(def))
+
+#if !MIN_VERSION_data_default_class(0,1,2)
 import Data.Default.Instances.Base ()
+#endif
 
 
 -- | @'def' = 'Const' 'def'@

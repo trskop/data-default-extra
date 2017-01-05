@@ -3,12 +3,12 @@
 -- |
 -- Module:       $HEADER$
 -- Description:  A class for types with a default value.
--- Copyright:    (c) 2016, Peter Trško
+-- Copyright:    (c) 2016-2017 Peter Trško
 -- License:      BSD3
 --
 -- Maintainer:   peter.trsko@gmail.com
 -- Stability:    stable
--- Portability:  CPP, NoImplicitPrelude
+-- Portability:  GHC specific language extensions.
 --
 -- A class for types with a default value.
 module Data.Default
@@ -48,7 +48,6 @@ module Data.Default
   where
 
 import Data.Default.Class (Default(def))
-import Data.Default.Instances.Base ()
 import Data.Default.Instances.Base.New ()
 
 #ifdef WITH_bytestring

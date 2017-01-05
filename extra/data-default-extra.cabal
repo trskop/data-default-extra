@@ -1,5 +1,5 @@
 name:                   data-default-extra
-version:                0.0.1
+version:                0.1.0
 synopsis:               A class for types with a default value.
 description:
   An alternative to
@@ -40,12 +40,13 @@ license:                BSD3
 license-file:           LICENSE
 author:                 Peter Trško
 maintainer:             peter.trsko@gmail.com
-copyright:              (c) 2016, Peter Trško
+copyright:              (c) 2016-2017 Peter Trško
 category:               Data
 build-type:             Simple
 cabal-version:          >=1.10
 
 extra-source-files:     ChangeLog.md, README.md
+
 
 flag with-bytestring
   description:
@@ -116,9 +117,8 @@ library
 
   build-depends:
       base <6
-    , data-default-class <0.2
-    , data-default-instances-base <0.2
-    , data-default-instances-new-base ==0.0.*
+    , data-default-class >=0.0.1 && <0.2
+    , data-default-instances-new-base >=0.0.1 && <0.2
 
   if impl(ghc <7.6)
     -- GHC.Generics moved from ghc-prim to base with GHC 7.6 release.
@@ -165,4 +165,4 @@ source-repository head
 source-repository this
   type:                 git
   location:             git://github.com/trskop/data-default-extra.git
-  tag:                  v0.0.1
+  tag:                  class-0.1.2
