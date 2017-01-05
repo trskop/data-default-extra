@@ -53,20 +53,37 @@ Usage example:
 
 ```Haskell
 {-# LANGUAGE DeriveGeneric #-}
+{-# LANGUAGE DefaultSignatures #-}
 
 import GHC.Generics (Generic)
+import Data.Default (Default)
 
 data MyType = MyType Int (Maybe String)
   deriving (Generic, Show)
 
-instance Default MyType where
-    def = genericDef
+instance Default MyType
 ```
 
 ```
 λ> def :: MyType
 MyType 0 Nothing
 ```
+
+One can also use `DeriveAnyClass` language extension:
+
+```Haskell
+{-# LANGUAGE DeriveGeneric #-}
+{-# LANGUAGE DeriveAnyClass #-}
+
+import GHC.Generics (Generic)
+import Data.Default (Default)
+
+data MyType = MyType Int (Maybe String)
+  deriving (Default, Generic, Show)
+```
+
+Be aware that `DeriveAnyClass` doesn't work well together with
+`GeneralizedNewtypeDeriving` on some versions of GHC. See [GHC issue #10598][]
 
 
 ## License
@@ -92,6 +109,9 @@ afraid to contact author using GitHub or by e-mail.
 [GHC Generics]:
   https://wiki.haskell.org/GHC.Generics
   "GHC.Generics on HaskellWiki"
+[GHC issue #10598]:
+  https://ghc.haskell.org/trac/ghc/ticket/10598
+  "GHC issue #10598: DeriveAnyClass and GND don't work well together"
 [Haskell.org]:
   http://www.haskell.org
   "The Haskell Programming Language"
