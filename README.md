@@ -14,7 +14,8 @@ List of provided packages:
 * [![Hackage](http://img.shields.io/hackage/v/data-default-extra.svg)][data-default-extra]
   [![Hackage Dependencies](https://img.shields.io/hackage-deps/v/data-default-extra.svg)](http://packdeps.haskellers.com/reverse/data-default-extra)
   `data-default-extra` - Alternative to [data-default][] package with extra
-  instances and support for [GHC Generics][].
+  instances and support for [GHC Generics][] for older versions of
+  `data-default-class` package.
 
 * [![Hackage](http://img.shields.io/hackage/v/data-default-instances-bytestring.svg)][data-default-instances-bytestring]
   [![Hackage Dependencies](https://img.shields.io/hackage-deps/v/data-default-instances-bytestring.svg)](http://packdeps.haskellers.com/reverse/data-default-instances-bytestring)
